@@ -84,7 +84,7 @@ This program was built using *`Microsoft .NET SDK 5.0.401`*, and may not be comp
 ---
 ## License
 
-_See License Attached_
+_See MIT License Attached_
 
 [Copyright](/LICENSE) © 2022 Joe Roaden
 
