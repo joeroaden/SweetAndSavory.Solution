@@ -76,11 +76,11 @@ namespace SweetAndSavory.Controllers
         }
 
         
-        public ActionResult Details()
-        {
+        // public ActionResult Details()
+        // {
 
-            return View();
+        //     return View();
 
-        }
+        // }
     }
 }

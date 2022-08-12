@@ -18,7 +18,7 @@ namespace SweetAndSavory.Controllers
     {
       _db = db;
     }
-    
+    [AllowAnonymous]
     public ActionResult Index()
     {
       List<Flavor> model = _db.Flavors.ToList();
@@ -39,7 +39,6 @@ namespace SweetAndSavory.Controllers
       return RedirectToAction("Index");
     }
 
-    [Authorize]
     public ActionResult Details(int id)
     {
     var thisFlavor = _db.Flavors

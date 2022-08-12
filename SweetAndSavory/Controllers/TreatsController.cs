@@ -11,7 +11,7 @@ using System.Security.Claims;
 
 namespace SweetAndSavory.Controllers
 {
-  [Authorize]
+  
   public class TreatsController : Controller
   {
     private readonly SweetAndSavoryContext _db;
@@ -23,12 +23,10 @@ namespace SweetAndSavory.Controllers
       _db = db;
     }
 
-    public async Task<ActionResult> Index()
+    [AllowAnonymous]
+    public ActionResult Index()
     {
-      var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-      var currentUser = await _userManager.FindByIdAsync(userId);
-      var userTreats = _db.Treats.Where(entry => entry.User.Id == currentUser.Id).ToList();
-      return View(userTreats);
+      return View(_db.Treats.ToList());
       
     }
     [Authorize]
@@ -54,7 +52,7 @@ namespace SweetAndSavory.Controllers
       return RedirectToAction("Index");
     }
 
-    [Authorize]
+    [AllowAnonymous]
     public ActionResult Details(int id)
     {
       var thisTreat = _db.Treats
@@ -91,7 +89,7 @@ namespace SweetAndSavory.Controllers
       ViewBag.FlavorId = new SelectList(_db.Flavors, "FlavorId", "Name");
       return View(thisTreat);
     }
-    [HttpPost]
+    [Authorize, HttpPost]
     public ActionResult AddFlavor(Treat treat, int FlavorId)
     {
       if (FlavorId != 0)
@@ -109,7 +107,7 @@ namespace SweetAndSavory.Controllers
       return View(thisTreat);
     }
 
-    [HttpPost, ActionName("Delete")]
+    [Authorize, HttpPost, ActionName("Delete")]
     public ActionResult DeleteConfirmed(int id)
     {
       var thisTreat = _db.Treats.FirstOrDefault(treats => treats.TreatId == id);
@@ -118,7 +116,7 @@ namespace SweetAndSavory.Controllers
       return RedirectToAction("Index");
     }
 
-    [HttpPost]
+    [Authorize, HttpPost]
     public ActionResult DeleteFlavor(int joinId)
     {
         var joinEntry = _db.FlavorTreat.FirstOrDefault(entry => entry.FlavorTreatId == joinId);
