@@ -2,7 +2,7 @@
 
 #### By _Joe Roaden_
 
-#### _Brief description of application_
+#### _An MVC application using Databases and MySQLWorkbench used to track flovors and sweets using a many to many relationship_
 
 ---
 ## Table of Contents
@@ -22,6 +22,7 @@
 * _SQL Workbench_
 * _Entity Framework_
 * _MVC_
+* _Identity Framework_
 
 ---
 ## Description
@@ -34,26 +35,26 @@ _An MVC application using Databases and MySQLWorkbench used to track flovors and
 <details>
 <summary><strong>Initial Setup</strong></summary>  
 
-1. Copy the git repository url: https://github.com/CyndaZ42/RecipeBox  
+1. Copy the git repository url: https://github.com/joeroaden/SweetAndSavory.Solution 
 2. Open a shell program and navigate to your desktop.
 3. Clone the repository for this project using the `git clone` command and including the copied URL.
-4. While still in the shell program, navigate to the root directory of the newly created file named `RecipeBox.Solution`.
-5. From the root directory, navigate to the `RecipeBox` directory.
+4. While still in the shell program, navigate to the root directory of the newly created file named `SweetAndSavory.Solution`.
+5. From the root directory, navigate to the `SweetAndSavory` directory.
 6. Move onto SQL Workbench instructions below to re-create database necessary to run this project.
 </details>
 
 <details>
 <summary><strong>SQL Workbench Configuration</strong></summary>
 
-1. Create an `appsetting.json` file in the `RecipeBox` directory of the project  
-   <pre>RecipeBox.Solution
-   └── RecipeBox
+1. Create an `appsetting.json` file in the `SweetAndSavory` directory of the project  
+   <pre>SweetAndSavory.Solution
+   └── SweetAndSavory
     └── <strong>appsetting.json</strong></pre>
 2. Insert the following code [^1]  
     ```json
     {
       "ConnectionStrings": {
-        "DefaultConnection": "Server=localhost;Port=3306;database=project_name;uid=root;pwd=[YOUR-PASSWORD-HERE];"
+        "DefaultConnection": "Server=localhost;Port=3306;database=joe_roaden;uid=root;pwd=[YOUR-PASSWORD-HERE];"
       }
     }
     ```
@@ -65,8 +66,8 @@ _An MVC application using Databases and MySQLWorkbench used to track flovors and
 <summary><strong>To Run</strong></summary>
 
 1. Navigate to:  
-   <pre>RecipeBox.Solution
-   └── <strong>RecipeBox</strong></pre>
+   <pre>SweetAndSavory.Solution
+   └── <strong>SweetAndSavory</strong></pre>
 
 2. Run `$ dotnet restore` in the console.  
 3. Run `$ dotnet database update` in the console.  
@@ -83,9 +84,9 @@ This program was built using *`Microsoft .NET SDK 5.0.401`*, and may not be comp
 ---
 ## License
 
-_Feel free to reach out via [Github](https://github.com/CyndaZ42) to provide feedback on this project or to view my other projects._
+_See License Attached_
 
-[Copyright](/LICENSE) © 2022 Zachary Waggoner, Joe Roaden, Jacob Polaro
+[Copyright](/LICENSE) © 2022 Joe Roaden
 
 ---
 ### Footnotes
