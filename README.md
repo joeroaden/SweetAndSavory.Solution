@@ -2,7 +2,7 @@
 
 #### By _Joe Roaden_
 
-#### _An MVC application using Databases and MySQLWorkbench used to track flovors and sweets using a many to many relationship_
+#### _An MVC application using Databases and MySQLWorkbench used to track flavors and sweets using a many to many relationship_
 
 ---
 ## Table of Contents
