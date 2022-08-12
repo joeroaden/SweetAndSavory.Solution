@@ -10,5 +10,7 @@ div#page {
 
 div#bottomImage {
 	margin: auto;
+	margin-left: auto;
+	margin-right: auto;
 	opacity: .2;
 }
