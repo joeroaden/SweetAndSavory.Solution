@@ -27,7 +27,7 @@
 ---
 ## Description
 
-_An MVC application using Databases and MySQLWorkbench used to track flovors and sweets using a many to many relationship_
+_An MVC application using Databases and MySQLWorkbench used to track flovors and sweets using a many to many relationship.  This project has user authentication and new users can create an account to add, edit or delete flavors and treats.  Anonymous users can view existing flavors and their respective treats, but only authorized users can make updates_
 
 ---
 ## Setup and Installation Requirements
